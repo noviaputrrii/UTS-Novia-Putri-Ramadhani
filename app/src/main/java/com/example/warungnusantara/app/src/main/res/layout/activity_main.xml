@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Header Image -->
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header_resto"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warung Nusantara"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintTop_toBottomOf="@id/headerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesan menu favoritmu"
+        android:textSize="14sp"
+        android:textColor="#777777"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Input Nama -->
+    <TextView
+        android:id="@+id/lblNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAMA PEMESAN"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ketik nama Anda..."
+        android:inputType="textPersonName"
+        android:backgroundTint="#CCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/lblNama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"/>
+
+    <!-- Tipe Pesanan -->
+    <TextView
+        android:id="@+id/lblTipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIPE PESANAN"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etNama"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupTipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/lblTipe"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbDineIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makan di Tempat"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbTakeAway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bawa Pulang"
+            android:layout_marginStart="16dp"/>
+    </RadioGroup>
+
+    <!-- Opsi Tambahan -->
+    <TextView
+        android:id="@+id/lblOpsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPSI TAMBAHAN"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupTipe"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/llCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/lblOpsi"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp">
+
+        <CheckBox
+            android:id="@+id/cbPedas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ekstra Pedas (+Rp 2.000)"/>
+
+        <CheckBox
+            android:id="@+id/cbAlatMakan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minta Alat Makan"/>
+    </LinearLayout>
+
+    <!-- Tombol Pesan -->
+    <Button
+        android:id="@+id/btnPesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PESAN SEKARANG"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
